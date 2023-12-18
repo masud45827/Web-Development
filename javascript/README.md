@@ -273,4 +273,54 @@ JavaScript Variables can be declared in 4 ways:
 </html>
 ```
 
-Object
+# Object create.
+
+```
+<!DOCTYPE html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h2>JavaScript Object</h2>
+  <p id='demo'></p>
+  <script>
+    //create an object
+    const  Student={
+      Name: "Masud",
+      age: 18,
+      Id:27
+    };
+    document.getElementById('demo').innerHTML="student Name = "+Student.Name+" Student age = "+Student.age;
+       // another process
+    document.getElementById('demo').innerHTML="student Name = "+Student["Name"]+" Student age = "+Student["age"];
+  </script>
+</body>
+</html>
+```
+
+# Object Methods
+```
+<!DOCTYPE html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>JavaScript Object</h2>
+  <p id='demo'></p>
+  <script>
+    //create an object
+    const person = {
+      firstName: "Masud",
+      lastName: "Ali",
+      id: 27,
+      fullName: function () {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+    document.getElementById('demo').innerHTML = person.fullName();
+  </script>
+</body>
+</html>
+```
