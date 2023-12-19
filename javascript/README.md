@@ -324,3 +324,135 @@ JavaScript Variables can be declared in 4 ways:
 </body>
 </html>
 ```
+# JavaScript Events.
+HTML events are "things" that happen to HTML elements.<br>
+When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+Example.
+```
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>JavaScript HTML Events</h1>
+  <h2>The onclick Attribute</h2>
+
+  <button onclick="fun()">The time is?</button>
+  <script>
+    function fun() {
+      document.getElementById('demo').innerHTML = Date();
+    }
+  </script>
+
+  <p id="demo"></p>
+
+</body>
+
+</html>
+```
+
+In the next example, the code changes the content of its own element (using this.innerHTML):
+```
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+
+<button onclick="this.innerHTML=Date()">The time is?</button>
+
+</body>
+</html>
+```
+
+# String
+## String Length.
+To find the length of a string, use the built-in length property.<br>
+```
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length;
+```
+## Escape Character
+![example](image.png)<br>
+example: let text = "We are the so-called \"Vikings\" from the north.";<br>
+output: We are the so-called "Vikings" from the north.
+
+## JavaScript String Methods.
+1. String length
+2. String slice()
+3. String substring()
+4. String substr()
+5. String replace()
+6. String replaceAll()
+7. String toUpperCase()
+8. String toLowerCase()
+9. String concat()
+10. String trim()
+11. String trimStart()
+12. String trimEnd()
+13. String padStart()
+14. String padEnd()
+15. String charAt()
+16. String charCodeAt()
+17. String split()
+
+## Interpolation
+Template literals provide an easy way to interpolate variables and expressions into strings.
+
+The method is called string interpolation.
+```
+${...}
+```
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="demo"></p>
+  <script>
+    let firstName = "John";
+    let lastName = "Doe";
+
+    let text = `Welcome ${firstName}, ${lastName}!`;
+
+    document.getElementById("demo").innerHTML = text;
+  </script>
+
+</body>
+</html>
+```
+```
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="demo"></p>
+  <script>
+    let price = 10;
+    let VAT = 0.25;
+    let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+    document.getElementById("demo").innerHTML = total;
+  </script>
+
+</body>
+</html>
+```
+
+<b>HTML template.</b>
+```
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="demo"></p>
+  <script>
+    let header = "Templates Literals";
+    let tags = ["template literals", "javascript", "es6"];
+    let html = `<h2>${header}</h2><ul>`;
+    for (const x of tags) {
+      html += `<li>${x}</li>`;
+    }
+    html += `</ul>`;
+    document.getElementById("demo").innerHTML = html;
+  </script>
+</body>
+</html>
+```
