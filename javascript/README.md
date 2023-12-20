@@ -181,14 +181,19 @@ Placing scripts in external files has some advantages:
 3. Cached JavaScript files can speed up page loads
 
 # JavaScript Output
+
 JavaScript can "display" data in different ways:<br>
+
 1. Writing into an HTML element, using innerHTML.
 2. Writing into the HTML output using document.write().
 3. Writing into an alert box, using window.alert().
 4. Writing into the browser console, using console.log().
+
 ## Using innerHTML
+
 To access an HTML element, JavaScript can use the document.getElementById(id) method.<br>
 The id attribute defines the HTML element. The innerHTML property defines the HTML content:<br>
+
 ```
 <!DOCTYPE html>
 <html>
@@ -205,7 +210,9 @@ The id attribute defines the HTML element. The innerHTML property defines the HT
 ```
 
 ## Using document.write()
+
 For testing purposes, it is convenient to use document.write():
+
 ```
 <!DOCTYPE html>
 <html>
@@ -220,7 +227,9 @@ For testing purposes, it is convenient to use document.write():
   </body>
 </html>
 ```
+
 ## Using window.alert()
+
 ```
 <html>
   <body>
@@ -234,8 +243,10 @@ For testing purposes, it is convenient to use document.write():
 </html>
 ```
 
-## JavaScript Print.
+## JavaScript Print
+
 The only exception is that you can call the window.print() method in the browser to print the content of the current window.
+
 ```
 <!DOCTYPE html>
 <html>
@@ -245,15 +256,18 @@ The only exception is that you can call the window.print() method in the browser
 </html>
 ```
 
-# JavaScript Variables.
+# JavaScript Variables
+
 Variables are Containers for Storing Data.<br>
 JavaScript Variables can be declared in 4 ways:
+
 1. Automatically
 2. Using var
 3. Using let
 4. Using const
 
 # Function JavaScript
+
 ```
 <!DOCTYPE html>
 <head>
@@ -273,7 +287,7 @@ JavaScript Variables can be declared in 4 ways:
 </html>
 ```
 
-# Object create.
+# Object create
 
 ```
 <!DOCTYPE html>
@@ -299,6 +313,7 @@ JavaScript Variables can be declared in 4 ways:
 ```
 
 # Object Methods
+
 ```
 <!DOCTYPE html>
 
@@ -324,10 +339,13 @@ JavaScript Variables can be declared in 4 ways:
 </body>
 </html>
 ```
-# JavaScript Events.
+
+# JavaScript Events
+
 HTML events are "things" that happen to HTML elements.<br>
 When JavaScript is used in HTML pages, JavaScript can "react" on these events.
 Example.
+
 ```
 <!DOCTYPE html>
 <html>
@@ -351,6 +369,7 @@ Example.
 ```
 
 In the next example, the code changes the content of its own element (using this.innerHTML):
+
 ```
 <!DOCTYPE html>
 <html>
@@ -365,18 +384,24 @@ In the next example, the code changes the content of its own element (using this
 ```
 
 # String
-## String Length.
+
+## String Length
+
 To find the length of a string, use the built-in length property.<br>
+
 ```
 let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let length = text.length;
 ```
+
 ## Escape Character
+
 ![example](image.png)<br>
 example: let text = "We are the so-called \"Vikings\" from the north.";<br>
 output: We are the so-called "Vikings" from the north.
 
-## JavaScript String Methods.
+## JavaScript String Methods
+
 1. String length
 2. String slice()
 3. String substring()
@@ -396,9 +421,11 @@ output: We are the so-called "Vikings" from the north.
 17. String split()
 
 ## Interpolation
+
 Template literals provide an easy way to interpolate variables and expressions into strings.
 
 The method is called string interpolation.
+
 ```
 ${...}
 ```
@@ -420,6 +447,7 @@ ${...}
 </body>
 </html>
 ```
+
 ```
 <!DOCTYPE html>
 <html>
@@ -438,6 +466,7 @@ ${...}
 ```
 
 <b>HTML template.</b>
+
 ```
 <!DOCTYPE html>
 <html>
@@ -453,6 +482,156 @@ ${...}
     html += `</ul>`;
     document.getElementById("demo").innerHTML = html;
   </script>
+</body>
+</html>
+```
+
+# JavaScript Numbers
+
+let x = 999999999999999;   // x will be 999999999999999<br>
+let y = 9999999999999999;  // y will be 10000000000000000<br>
+<b>BigInt.</b><br>
+let y = 9999999999999999n;<br>
+let y = BigInt(1234567890123456789012345)<br>
+fixed value after decimal point function :  x.toFixed(2)
+<br>
+example :  x=24.434;<br>
+x.toFixed(2)=24.43<br>
+
+x.toPrecision(n) function print total n digit print.<br>
+example :  x=9.434;<br>
+x.toPrecision(2)=9.4<br>
+
+# JavaScript Arrays
+
+## Creating an Array
+
+Using an array literal is the easiest way to create a JavaScript Array.<br>
+
+```
+const array_name = [item1, item2, ...];  
+const cars = ["Saab", "Volvo", "BMW"];
+```
+
+Another process:
+
+```
+const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+```
+
+## Converting an Array to a String
+
+The JavaScript method toString() converts an array to a string of (comma separated) array values.<br>
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+```
+
+## Access the Full Array
+
+```
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+```
+
+## sorting array
+
+```
+cars.sort() 
+```
+
+## Revese Array
+
+```
+fruits.reverse();
+```
+
+## Array method>
+
+1. Array length
+2. Array toString()
+3. Array pop()
+4. Array push()
+5. Array shift()
+6. Array unshift()
+7. Array join()
+8. Array delete()
+9. Array concat()
+10. Array flat()
+11. Array splice()
+12. Array slice()
+
+# Math JavaScript
+
+1. Math.E        // returns Euler's number
+2. Math.PI       // returns PI
+3. Math.SQRT2    // returns the square root of 2
+4. Math.SQRT1_2  // returns the square root of 1/2
+5. Math.LN2      // returns the natural logarithm of 2
+6. Math.LN10     // returns the natural logarithm of 10
+7. Math.LOG2E    // returns base 2 logarithm of E
+8. Math.LOG10E   // returns base 10 logarithm of E
+  
+# Iterable loop
+
+```
+const name = "W3Schools";
+let text = ""
+for (const x of name) {
+  text += x + "<br>";
+}
+```
+
+# STL
+
+## set
+
+How to Create a Set
+You can create a JavaScript Set by:
+
+1. Passing an Array to new Set()
+2. Create a new Set and use add() to add values
+3. Create a new Set and use add() to add variables
+
+Essential Set Methods.
+
+1. new Set() = Creates a new Set
+2. add() = Adds a new element to the Set
+3. delete() = Removes an element from a Set
+4. has() = Returns true if a value exists in the Set
+5. forEach() = Invokes a callback for each element in the Set
+6. values() = Returns an iterator with all the values in a Set
+Property Description
+7. size = Returns the number of elements in a Set
+  
+## Maps
+
+1. new Map() Creates a new Map
+2. set() Sets the value for a key in a Map
+3. get() Gets the value for a key in a Map
+4. delete() Removes a Map element specified by the key
+5. has() Returns true if a key exists in a Map
+6. forEach() Calls a function for each key/value pair in a Map
+7. entries() Returns an iterator with the [key, value] pairs in a Map
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+const fruits = new Map();
+
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+document.getElementById("demo").innerHTML = fruits.get("apples");
+</script>
+
 </body>
 </html>
 ```
