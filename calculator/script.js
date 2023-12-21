@@ -1,4 +1,4 @@
-function fun(st) {
+function delete_last_digit(st) {
     let n = st.length;
     let s = "";
     for (let i = 0; i < n - 1; i++) {
@@ -6,7 +6,7 @@ function fun(st) {
     }
     return s;
 }
-function op(s) {
+function calculate(s) {
     let x = "", y = "";
     let n = s.length;
     i = 0;
