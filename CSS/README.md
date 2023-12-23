@@ -963,4 +963,363 @@ h1 {
   text-shadow: 2px 2px;
 }
 ```
-![example](Screenshot_21.png)
+
+![example](Screenshot_21.png)<br>
+
+# CSS Fonts
+
+In CSS there are five generic font families:<br>
+
+1. <b>Serif</b> fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.
+2. <b>Sans-serif</b> fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.
+3. <b>Monospace</b> fonts - here all the letters have the same fixed width. They create a mechanical look.
+4. <b>Cursive</b> fonts imitate human handwriting.
+5. <b>Fantasy</b> fonts are decorative/playful fonts.
+
+![example](Screenshot_22.png)<br>
+![example](Screenshot_23.png)<br>
+
+```
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+
+<h1>CSS font-family</h1>
+<p class="p1">This is a paragraph, shown in the Times New Roman font.</p>
+<p class="p2">This is a paragraph, shown in the Arial font.</p>
+<p class="p3">This is a paragraph, shown in the Lucida Console font.</p>
+```
+
+Output.<br>
+![example](Screenshot_24.png)<br>
+
+## CSS Web Safe Fonts
+
+CSS Web Safe Fonts.<br>
+Best Web Safe Fonts for HTML and CSS
+The following list are the best web safe fonts for HTML and CSS:
+
+<li>Arial (sans-serif)</li>
+<li>Verdana (sans-serif)</li>
+<li>Tahoma (sans-serif)</li>
+<li>Trebuchet MS (sans-serif)</li>
+<li>Times New Roman (serif)</li>
+<li>Georgia (serif)</li>
+<li>Garamond (serif)</li>
+<li>Courier New (monospace)</li>
+<li>Brush Script MT (cursive)</li>
+
+![example](Screenshot_25.png)<br>
+![example](Screenshot_26.png)<br>
+![example](Screenshot_27.png)<br>
+![example](Screenshot_28.png)<br>
+
+## CSS Font Style
+
+The font-style property is mostly used to specify italic text.<br>
+
+This property has three values:<br>
+
+<li>normal - The text is shown normally.</li>
+<li>italic - The text is shown in italics.</li>
+<li>oblique - The text is "leaning" (oblique is very similar to italic, but less supported)</li>
+
+Example:<br>
+
+```
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+```
+
+<b>Font Weight.</b><br>
+The font-weight property specifies the weight of a font:<br>
+
+```
+p.normal {
+  font-weight: normal;
+}
+
+p.thick {
+  font-weight: bold;
+}
+```
+
+<b>Font Variant</b>
+The font-variant property specifies whether or not a text should be displayed in a small-caps font.<br>
+```
+p.normal {
+  font-variant: normal;
+}
+
+p.small {
+  font-variant: small-caps;
+}
+
+<h1>The font-variant property</h1>
+
+<p class="normal">My name is Hege Refsnes.</p>
+<p class="small">My name is Hege Refsnes.</p>
+```
+
+![example](Screenshot_29.png)<br>
+
+<b>CSS Font Size</b>
+The font-size property sets the size of the text.<br>
+```
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+```
+
+Output:
+![figure](Screenshot_30.png)<br>
+
+
+# CSS Icons.
+Icons can easily be added to your HTML page, by using an icon library.<br>
+```
+<html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--Get your own code at fontawesome.com-->
+</head>
+<body>
+
+<h1>Font Awesome icon library</h1>
+
+<p>Some Font Awesome icons:</p>
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart"></i>
+<i class="fas fa-car"></i>
+<i class="fas fa-file"></i>
+<i class="fas fa-bars"></i>
+
+<p>Styled Font Awesome icons (size and color):</p>
+<i class="fas fa-cloud" style="font-size:24px;"></i>
+<i class="fas fa-cloud" style="font-size:36px;"></i>
+<i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
+<i class="fas fa-cloud" style="font-size:60px;color:lightblue;"></i>
+
+</body>
+</html>
+```
+Output:<br>
+![figure](Screenshot_31.png)<br>
+
+# hover in CSS.
+A CSS hover effect takes place when a user hovers over an element, and the element responds with transition effects. It is used to mark the key items on the web page and it's an effective way to enhance the user experience.
+
+# CSS Links<br>
+
+The four links states are:
+<li>a:link - a normal, unvisited link</li>
+<li>a:visited - a link the user has visited</li>
+<li>a:hover - a link when the user mouses over it</li>
+<li>a:active - a link the moment it is clicked</li>
+
+method:<br>
+```
+<a href="(link_address)" target="_blank">This is a link</a>
+```
+```
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover  {
+  background-color: red;
+}
+
+<a href="codeforces.com" target="_blank">This is a link</a>
+```
+
+# CSS Lists.
+![figure](Screenshot_32.png)
+HTML Lists and CSS List Properties<br>
+In HTML, there are two main types of lists:<br>
+
+unordered lists (<ul>) - the list items are marked with bullets.
+ordered lists (<ol>) - the list items are marked with numbers or letters.
+```
+<style>
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+</style>
+
+
+
+<h2>The list-style-type Property</h2>
+
+<p>Example of unordered lists:</p>
+<ul class="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="b">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<p>Example of ordered lists:</p>
+<ol class="c">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="d">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+```
+Output:<br>
+![example](Screenshot_33.png)<br>
+
+#  CSS Tables.
+```
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid;
+}
+table{
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<h2>Add a border to a table:</h2>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+Output:
+<html>
+<head>
+<style>
+table, th, td {
+  border: 2px solid;
+}
+table{
+  width: 100%;
+}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>hasan</td>
+    <td>mahmud</td>
+  </tr>
+  <tr>
+    <td>musfiqur</td>
+    <td>rahim</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+# CSS Layout - The display Property.
+The display property is the most important CSS property for controlling layout.<br>
+<b>The display Property.</b><br>
+The display property is used to specify how an element is shown on a web page.
+
+Every HTML element has a default display value, depending on what type of element it is. The default display value for most elements is block or inline.<br>
+The display property is used to change the default display behavior of HTML elements.<br>
+
+<b>Block-level Elements.</b>
+A block-level element ALWAYS starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).<br>
+![figure](Screenshot_36.png)<br>
+<b>Inline Elements.</b>
+An inline element DOES NOT start on a new line and only takes up as much width as necessary.<br>
+
+![figure](Screenshot_35.png)<br>
+
+![figure](Screenshot_37.png)<br>
+![figure](Screenshot_38.png)<br>
+
+<b>Display: none;</b>
+display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.
+
+
+
+
+
